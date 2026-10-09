@@ -1,0 +1,339 @@
+.socialProofSection {
+  position: relative;
+  width: 100%;
+  background-color: #FAF7EE;
+  padding: 48px 24px 68px 24px;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.18fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* =========================================
+   Left Column: Happy Customers
+   ========================================= */
+.reviewsCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.tagWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.tagLine {
+  display: inline-block;
+  width: 34px;
+  height: 1px;
+  background-color: #d6b882;
+}
+
+.tagText {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #a87d3e;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 2.4vw, 2.25rem);
+  font-weight: 700;
+  color: #17120e;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  color: #635b4f;
+  line-height: 1.5;
+  margin: 0 0 24px 0;
+}
+
+/* Review Cards Grid */
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.reviewCard {
+  background-color: #FFFEFB;
+  border: 1px solid #ebd9c4;
+  border-radius: 14px;
+  padding: 20px 18px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 18px rgba(50, 35, 20, 0.04), 0 1px 3px rgba(50, 35, 20, 0.02);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+}
+
+.reviewCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(50, 35, 20, 0.08);
+  border-color: #dfcaa8;
+}
+
+/* Decorative Quote Mark */
+.quoteMark {
+  font-family: var(--font-serif);
+  font-size: 38px;
+  line-height: 0.8;
+  color: #e5b869;
+  opacity: 0.7;
+  margin-bottom: 8px;
+  user-select: none;
+}
+
+.quoteText {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.55;
+  color: #2e241b;
+  margin: 0 0 16px 0;
+  flex-grow: 1;
+}
+
+/* Author Profile Row */
+.authorRow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(225, 210, 192, 0.55);
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  border: 2px solid #FAF7EE;
+}
+
+.avatarImage {
+  object-fit: cover;
+}
+
+.authorMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.authorName {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: #17120e;
+  line-height: 1.2;
+}
+
+.starsRow {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: 2px;
+}
+
+.verifiedBadge {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  color: #8c765f;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* =========================================
+   Right Column: Follow Our Journey
+   ========================================= */
+.instagramCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.instaHeaderRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.instaBadge {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #eedecb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6a441e;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(70, 45, 20, 0.08);
+}
+
+.instaEyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #a87d3e;
+}
+
+.instaTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 2.4vw, 2.25rem);
+  font-weight: 700;
+  color: #17120e;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+  margin: 0 0 8px 0;
+}
+
+.instaSubtitle {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  color: #635b4f;
+  line-height: 1.5;
+  margin: 0 0 24px 0;
+}
+
+/* 5-Photo Interactive Gallery */
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.galleryCard {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ebd9c4;
+  box-shadow: 0 3px 10px rgba(50, 35, 20, 0.07);
+  border: 1px solid rgba(225, 210, 192, 0.8);
+  display: block;
+  text-decoration: none;
+}
+
+.galleryCardImage {
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Instagram Hover Overlay */
+.galleryOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 12, 7, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  color: #FFFFFF;
+}
+
+.galleryCard:hover .galleryCardImage {
+  transform: scale(1.08);
+}
+
+.galleryCard:hover .galleryOverlay {
+  opacity: 1;
+}
+
+/* Follow Button Wrapper */
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.followBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background-color: #FFFEFB;
+  color: #2a1f14;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 24px;
+  border-radius: 9999px;
+  border: 1px solid #d4bea7;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(50, 35, 20, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.followBtn:hover {
+  background-color: #17120e;
+  color: #FFFFFF;
+  border-color: #17120e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(23, 18, 14, 0.18);
+}
+
+.followBtn:hover .btnArrow {
+  transform: translateX(3px);
+}
+
+.btnArrow {
+  transition: transform 0.2s ease;
+}
+
+/* =========================================
+   Responsive Breakpoints
+   ========================================= */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .galleryGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .socialProofSection {
+    padding: 38px 18px 52px 18px;
+  }
+
+  .reviewsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .galleryGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .galleryCard:nth-child(n+4) {
+    display: none;
+  }
+}

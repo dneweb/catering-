@@ -1,0 +1,208 @@
+.kitchenSection {
+  position: relative;
+  width: 100%;
+  background-color: #FAF7EE;
+  padding: 50px 24px 64px 24px;
+  overflow: hidden;
+  border-top: 1px solid rgba(224, 210, 192, 0.4);
+}
+
+/* Botanical Corner Leaves from public/images/leaf.webp */
+.leafDecoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.95;
+  user-select: none;
+}
+
+.leafTopLeft {
+  top: 0;
+  left: 0;
+  width: clamp(110px, 13vw, 150px);
+  height: auto;
+}
+
+.leafTopRight {
+  top: 0;
+  right: 0;
+  width: clamp(110px, 13vw, 150px);
+  height: auto;
+  transform: scaleX(-1);
+}
+
+/* Section Header */
+.headerWrapper {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 34px auto;
+}
+
+.titleWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.titleLine {
+  display: inline-block;
+  width: clamp(32px, 4vw, 48px);
+  height: 1px;
+  background-color: #d6b882;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  color: #17120e;
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  color: #635b4f;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+/* 4-Cards Grid */
+.cardsGrid {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Individual Card */
+.card {
+  background-color: #FDFBF7;
+  border: 1px solid #ebd9c4;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(45, 30, 15, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(45, 30, 15, 0.08);
+}
+
+/* Card Top Image */
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  background-color: #f0e6d8;
+}
+
+.cardImage {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.03);
+}
+
+/* Card Body */
+.cardBody {
+  padding: 16px 18px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  color: #17120e;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 5px 0;
+}
+
+.cardDescription {
+  font-family: var(--font-sans);
+  color: #635b4f;
+  font-size: 13px;
+  line-height: 1.45;
+  margin: 0 0 16px 0;
+  flex-grow: 1;
+}
+
+/* Link CTA */
+.menuLink {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #a17336;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: auto;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.menuLink:hover {
+  color: #744e21;
+}
+
+.arrowIcon {
+  transition: transform 0.2s ease;
+}
+
+.menuLink:hover .arrowIcon {
+  transform: translateX(3px);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 680px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .kitchenSection {
+    padding: 38px 18px 48px 18px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    gap: 20px;
+  }
+
+  .leafTopLeft {
+    width: 90px;
+  }
+
+  .leafTopRight {
+    width: 90px;
+  }
+
+  .heading {
+    font-size: 1.85rem;
+  }
+}

@@ -1,0 +1,170 @@
+.howItWorksSection {
+  position: relative;
+  width: 100%;
+  background-color: #FAF7EE;
+  padding: 56px 24px 64px 24px;
+  overflow: hidden;
+}
+
+/* Botanical Corner Leaves */
+.leafDecoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.95;
+  user-select: none;
+}
+
+.leafTopLeft {
+  top: 0;
+  left: 0;
+  width: clamp(100px, 12vw, 140px);
+  height: auto;
+}
+
+.leafTopRight {
+  top: 0;
+  right: 0;
+  width: clamp(100px, 12vw, 140px);
+  height: auto;
+  transform: scaleX(-1);
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.headerWrapper {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 44px auto;
+}
+
+.tagWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.tagLine {
+  display: inline-block;
+  width: clamp(28px, 3.5vw, 42px);
+  height: 1px;
+  background-color: #d6b882;
+}
+
+.tagText {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #a87d3e;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  color: #17120e;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+/* 3-Steps Timeline Row */
+.stepsRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.stepItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.iconCircle {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: #eedecb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 14px rgba(60, 40, 20, 0.05);
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.stepItem:hover .iconCircle {
+  transform: translateY(-3px) scale(1.04);
+  background-color: #e6d3bd;
+}
+
+.stepTitle {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: #17120e;
+  margin: 0 0 7px 0;
+}
+
+.stepDescription {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #635b4f;
+  margin: 0;
+  max-width: 250px;
+}
+
+/* Connecting Chevron Arrow */
+.arrowDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 26px;
+  color: #caa983;
+}
+
+.chevronIcon {
+  width: 20px;
+  height: 20px;
+  stroke: #cca983;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .howItWorksSection {
+    padding: 44px 20px 52px 20px;
+  }
+
+  .stepsRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .arrowDivider {
+    padding: 0;
+    transform: rotate(90deg);
+  }
+
+  .stepDescription {
+    max-width: 280px;
+  }
+}

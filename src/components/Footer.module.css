@@ -1,0 +1,262 @@
+.footerSection {
+  position: relative;
+  width: 100%;
+  background-color: #140C07;
+  color: #FAF7EE;
+  padding: 54px 24px 24px 24px;
+  overflow: hidden;
+}
+
+/* Botanical Corner Leaves */
+.leafDecoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.25;
+  filter: brightness(0.7) sepia(0.5);
+  user-select: none;
+}
+
+.leafTopLeft {
+  top: 0;
+  left: 0;
+  width: clamp(100px, 12vw, 140px);
+  height: auto;
+}
+
+.leafTopRight {
+  top: 0;
+  right: 0;
+  width: clamp(100px, 12vw, 140px);
+  height: auto;
+  transform: scaleX(-1);
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 4-Columns Grid */
+.topGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr 1fr 1.1fr;
+  gap: 36px;
+  margin-bottom: 44px;
+}
+
+/* Column 1: Brand & Logo */
+.brandCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.logoImage {
+  width: clamp(115px, 8.5vw, 140px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.7));
+}
+
+.tagline {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-weight: 700;
+  color: #E5B869;
+  margin: 0 0 6px 0;
+}
+
+.brandDescription {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.55;
+  color: #aa9987;
+  margin: 0;
+  max-width: 290px;
+}
+
+/* Section Title for Columns */
+.colTitle {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.01em;
+}
+
+/* Column 2: Quick Links */
+.linksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.linkItem {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: #c4b5a3;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.linkItem:hover {
+  color: #E5B869;
+  transform: translateX(2px);
+}
+
+/* Column 3: Our Services */
+.servicesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.serviceItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: #c4b5a3;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.serviceItem:hover {
+  color: #E5B869;
+}
+
+.serviceIconWrap {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(229, 184, 105, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Column 4: Get in Touch */
+.touchCol {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.whatsappButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid rgba(229, 184, 105, 0.45);
+  background-color: rgba(229, 184, 105, 0.06);
+  color: #E5B869;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.whatsappButton:hover {
+  background-color: #E5B869;
+  color: #140C07;
+  border-color: #E5B869;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(229, 184, 105, 0.3);
+}
+
+.hoursBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hoursHeader {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.hoursText {
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  color: #aa9987;
+  margin: 0;
+  padding-left: 23px;
+}
+
+.closedText {
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  color: #837464;
+  margin: 0;
+  padding-left: 23px;
+}
+
+/* Bottom Bar */
+.bottomBar {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.bottomText {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8e7c69;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .topGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footerSection {
+    padding: 40px 18px 20px 18px;
+  }
+
+  .topGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .bottomText {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    line-height: 1.6;
+  }
+}
