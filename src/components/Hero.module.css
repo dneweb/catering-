@@ -223,77 +223,6 @@
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.9));
 }
 
-/* Bottom Center Scroll Down Indicator */
-.scrollDownWrapper {
-  position: absolute;
-  bottom: clamp(10px, 1.8vw, 24px);
-  left: 42%;
-  transform: translateX(-50%);
-  z-index: 15;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 0.9;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.scrollDownWrapper:hover {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-2px);
-}
-
-.scrollText {
-  font-family: var(--font-sans);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #d1c5b6;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
-}
-
-.mousePill {
-  width: 18px;
-  height: 28px;
-  border: 1.5px solid rgba(229, 169, 60, 0.7);
-  border-radius: 12px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-}
-
-.mouseWheel {
-  width: 3px;
-  height: 6px;
-  background-color: #e5a93c;
-  border-radius: 2px;
-  margin-top: 5px;
-  animation: mouseScroll 1.8s ease-in-out infinite;
-}
-
-@keyframes mouseScroll {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  60% {
-    transform: translateY(9px);
-    opacity: 0;
-  }
-  61% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 /* Floating WhatsApp Quick Action on bottom-right */
 .floatingFab {
   position: fixed;
@@ -412,10 +341,6 @@
     display: none;
   }
 
-  .scrollDownWrapper {
-    left: 50%;
-    bottom: 12px;
-  }
 }
 
 @media (max-width: 480px) {

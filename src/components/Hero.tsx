@@ -18,18 +18,6 @@ export default function Hero({ onOpenOrderModal }: HeroProps) {
     }
   };
 
-  const scrollToNext = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const servicesSection = document.getElementById("services");
-    if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: "smooth" });
-    } else {
-      window.scrollBy({
-        top: window.innerHeight * 0.85,
-        behavior: "smooth",
-      });
-    }
-  };
 
   return (
     <section id="home" className={styles.heroSection}>
@@ -103,18 +91,6 @@ export default function Hero({ onOpenOrderModal }: HeroProps) {
         </div>
       </div>
 
-      {/* Bottom Center: Scroll Down Indicator */}
-      <a
-        href="#services"
-        onClick={scrollToNext}
-        className={styles.scrollDownWrapper}
-        aria-label="Scroll down to explore"
-      >
-        <span className={styles.scrollText}>Scroll Down</span>
-        <div className={styles.mousePill}>
-          <span className={styles.mouseWheel}></span>
-        </div>
-      </a>
     </section>
   );
 }
